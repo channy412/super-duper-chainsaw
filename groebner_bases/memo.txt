@@ -1,0 +1,249 @@
+//class Rational {
+//public:
+//    Rational(long numerator, long denominator) : numerator(numerator), denominator(denominator) {}
+//
+//    long getNumerator() const {
+//        return numerator;
+//    }
+//
+//    void setNumerator(long numerator) {
+//        Rational::numerator = numerator;
+//    }
+//
+//    long getDenominator() const {
+//        return denominator;
+//    }
+//
+//    void setDenominator(long denominator) {
+//        Rational::denominator = denominator;
+//    }
+//
+//    friend std::ostream &operator<<(std::ostream &os, const Rational &rational) {
+//        os << rational.numerator << "/" << rational.denominator;
+//        return os;
+//    }
+//
+//private:
+//    long numerator;
+//    long denominator;
+//
+//};
+
+
+
+
+//    mpq_t r1;
+//    mpz_t n1;
+//    mpz_t d1;
+//
+//    mpz_init(n1);
+//    mpz_init(d1);
+//    mpz_set_si(n1, 100);
+//    mpz_set_si(d1, 10);
+//
+//    mpq_init(r1);
+//    mpq_set_num(r1,n1);
+//    mpq_set_den(r1, d1);
+//    gmp_printf ("a hex rational: %#40Qx\n", r1);
+//    std::cout <<  r1 << std::endl;
+
+
+
+
+//        std::vector<unsigned int> p_degrees = p.list.front().degrees;
+//        std::vector<unsigned int> p_i_degrees = dividor.list.front().degrees;
+
+
+
+
+for (int i = 0; i < vector.size(); i++) {
+            for (int j = 0; j < vector.size(); j++) {
+                Polynomial p = div_rem(S_polynomial(vector[i], vector[j]), vector);
+                if(!p.isZero()) {
+                    vector.push_back(p);
+                    // break the loops and start again
+                    i = vector.size();
+                    j = vector.size();
+                }
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Polynomial p = Polynomial(lexicographic_order);
+    Polynomial p2 = Polynomial(lexicographic_order);
+
+
+    mpq_class a(3, 1);
+    mpq_class b(2, 1);
+    mpq_class c(-1, 1);
+    mpq_class d(2, 1);
+    mpq_class e(-5, 1);
+
+    mpq_class one(1, 1);
+    unsigned int xx[] = {0, 0, 1, 0, 0};
+    unsigned int yy[] = {0, 0, 0, 1, 0};
+    unsigned int zz[] = {0, 0, 0, 0, 1};
+    unsigned int uuvv[] = {1, 1, 0, 0, 0};
+    unsigned int uuuu[] = {2, 0, 0, 0, 0};
+    unsigned int vv[] = {0, 1, 0, 0, 0};
+
+    Monomial x(one, xx, 5);
+    Monomial y(one, yy, 5);
+    Monomial z(one, zz, 5);
+    Monomial uv(-one, uuvv, 5);
+    Monomial uu(-one, uuuu, 5);
+    Monomial v(-one, vv, 5);
+
+
+    Polynomial P1(lexicographic_order);
+    Polynomial P2(lexicographic_order);
+    Polynomial P3(lexicographic_order);
+
+    P1.insert_monomial(x);
+    P1.insert_monomial(uv);
+    P2.insert_monomial(y);
+    P2.insert_monomial(v);
+    P3.insert_monomial(z);
+    P3.insert_monomial(uu);
+
+
+    P1.print();
+    P2.print();
+    P3.print();
+
+
+    unsigned int arr1[] = {3, 1};
+    unsigned int arr2[] = {1, 1};
+    unsigned int arr3[] = {0, 2};
+    unsigned int arr4[] = {1, 2};
+    unsigned int arr5[] = {0, 3};
+
+    Monomial m1(a, arr1, 2);
+    Monomial m2(b, arr2, 2);
+    Monomial m3(c, arr3, 2);
+    Monomial m1_1(-a, arr1, 2);
+    Monomial m4(d, arr4, 2);
+    Monomial m5(e, arr5, 2);
+
+
+    p.insert_monomial(m1);
+    p.insert_monomial(m2);
+    p.insert_monomial(m3);
+
+    p2.insert_monomial(m4);
+    p2.insert_monomial(m5);
+
+
+    std::vector<Polynomial> vector;
+    vector.push_back(P1);
+    vector.push_back(P2);
+    vector.push_back(P3);
+
+
+    GB(vector);
+
+
+    std::cout << "GB: " << std::endl;
+    for (int i = 0; i < vector.size(); ++i) {
+        vector[i].print();
+    }
+
+    autoReduction(vector);
+
+
+//    p.print();
+//    p2.print();
+
+
+    std::cout << "ComputeGB reduced: " << std::endl;
+    for (int i = 0; i < vector.size(); ++i) {
+        vector[i].print();
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//    S_polynomial(p, p2).print();
+
+//    p2.insert_monomial(m1);
+//    p2.insert_monomial(m3);
+
+
+//    p.print();
+//    p2.print();
+//
+//    std::vector<Polynomial> vector;
+//    vector.push_back(p2);
+//
+//    Polynomial p_rem = Polynomial(lexicographic_order);
+//    p_rem = div_rem(p, vector);
+//    p_rem.print();
+
+
+//    (p * p2).print();
+//
+//    p.insert_monomial(m2);
+//
+//    p.print();
+//
+//    p.insert_monomial(m3);
+//
+//    p.print();
+//
+//    p.insert_monomial(m3);
+//
+//    p.print();
+
+//    p.insert_monomial(m1_1);
+//
+//    p.print();
+
+//    std::cout << p.isZero() << std::endl;
+
+
+//    std::cout << a + b << std::endl;
+//    std::cout << m1 << std::endl;
+
+
+
+
+//        std::cout << std::endl;
+//        std::cout << std::endl;
+//        std::cout << "add: i: " << pair.first << " j: " << pair.second << std::endl;
+//        vector[pair.first].print();
+//        vector[pair.second].print();
+//        std::cout << std::endl;
+
+
+
+//        std::cout<< "p: "<< std::endl;
+//        p.print();
+//        std::cout<< "div pol "<< std::endl;
+//        vector[i].print();
+
+
+//    (g * p1).print();
+//    (h * p2).print();
+

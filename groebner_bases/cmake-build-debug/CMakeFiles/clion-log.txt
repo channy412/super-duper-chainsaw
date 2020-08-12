@@ -1,0 +1,5 @@
+/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /mnt/c/Users/ChanheeCho/CLionProjects/Grobner_bases
+-- Found GMP: /usr/lib/x86_64-linux-gnu/libgmp.so
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /mnt/c/Users/ChanheeCho/CLionProjects/Grobner_bases/cmake-build-debug

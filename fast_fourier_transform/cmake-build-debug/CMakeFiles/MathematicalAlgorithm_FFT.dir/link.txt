@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/MathematicalAlgorithm_FFT.dir/main.cpp.o CMakeFiles/MathematicalAlgorithm_FFT.dir/processing.cpp.o CMakeFiles/MathematicalAlgorithm_FFT.dir/simple_wav.cpp.o CMakeFiles/MathematicalAlgorithm_FFT.dir/svg_module.cpp.o  -o MathematicalAlgorithm_FFT 

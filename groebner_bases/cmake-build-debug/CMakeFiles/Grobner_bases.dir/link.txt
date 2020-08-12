@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/Grobner_bases.dir/main.cpp.o CMakeFiles/Grobner_bases.dir/GroebnerBasis.cpp.o  -o Grobner_bases -lgmp -lgmpxx 

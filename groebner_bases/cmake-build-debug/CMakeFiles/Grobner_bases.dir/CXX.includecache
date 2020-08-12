@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/c/Users/ChanheeCho/CLionProjects/Grobner_bases/GroebnerBasis.cpp
+GroebnerBasis.h
+/mnt/c/Users/ChanheeCho/CLionProjects/Grobner_bases/GroebnerBasis.h
+
+/mnt/c/Users/ChanheeCho/CLionProjects/Grobner_bases/GroebnerBasis.h
+
+/mnt/c/Users/ChanheeCho/CLionProjects/Grobner_bases/main.cpp
+iostream
+-
+vector
+-
+gmp.h
+-
+gmpxx.h
+-
+cassert
+-
+list
+-
+iterator
+-
+
