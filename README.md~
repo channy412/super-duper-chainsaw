@@ -1,6 +1,8 @@
 # A list of undergraduate projects
 
 
+
+
 ## ML based trading strategy(HKUST)    
 
 Title: T+0 stock trading strategy based on machine learning techniques    
@@ -8,16 +10,21 @@ Title: T+0 stock trading strategy based on machine learning techniques
 at The Hong Kong University of Science and Technology (HKUST)   
 
 
-## efficient subgraph matching
+
+
+## Efficient Subgraph Matching
 
 A project to make improvements and experimenting based on the following paper.   
 Efficient Subgraph Matching: Harmonizing Dynamic Programming, Adaptive Matching Order, and Failing Set Together    
 DAF [SIGMOD 2019]    
     
 
+
+
 ## static analysis 
 
 Several simple static analyzers.   
+
 
 
 
@@ -27,9 +34,13 @@ An implementation of fast fourier transfrom.
 Check interesting audio examples.   
 
 
+
+
+
 ## Groebner Bases 
 
 An implementation of Buchberger's algorithm to calculate groebner bases.   
+
 
 
 
@@ -39,7 +50,9 @@ An implmention of kernel thread, preemptive scheduler, and priority donation. Th
 
 
 
-## malloc package lab 
+
+
+## Malloc Package Lab 
 
 A malloc package implementaion from system programming course.   
 This is not a fancy one, but well-commented and easy to read.   
