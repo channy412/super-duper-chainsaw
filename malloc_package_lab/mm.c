@@ -24,8 +24,6 @@ team_t team = {
     "Chanhee Cho",
 };
 
-/* DON'T MODIFY THIS VALUE AND LEAVE IT AS IT WAS */
-static range_t **gl_ranges;
 
 /* single word (4) or double word (8) alignment */
 #define ALIGNMENT 8
@@ -91,31 +89,6 @@ static void *extend_heap(size_t words);
 
 
 /*
- * remove_range - manipulate range lists
- * DON'T MODIFY THIS FUNCTION AND LEAVE IT AS IT WAS
- */
-static void remove_range(range_t **ranges, char *lo)
-{
-    range_t *p;
-    range_t **prevpp = ranges;
-
-    if (!ranges)
-      return;
-
-    for (p = *ranges;  p != NULL; p = p->next) {
-      if (p->lo == lo) {
-        *prevpp = p->next;
-        free(p);
-        break;
-      }
-      prevpp = &(p->next);
-    }
-}
-
-
-
-
-/*
  *  mm_init - initialize the malloc package.
  *  return value : 0 on success, -1 on error.
  *  prologue and epilog is used and it is useful when coalescing.
@@ -139,9 +112,6 @@ int mm_init(range_t **ranges)
 
     /* Expand the empty heap with a free block of CHUNKSIZE bytes */
     if ( extend_heap(CHUNKSIZE/WSIZE) == NULL ) return -1;
-    
-    /* DON'T MODIFY THIS STAGE AND LEAVE IT AS IT WAS */
-    gl_ranges = ranges;
 
     return 0;
 }
@@ -391,24 +361,7 @@ void mm_free(void *ptr)
 
 
     ptr = ptr_save;
-    /* DON'T MODIFY THIS STAGE AND LEAVE IT AS IT WAS */
-    if (gl_ranges)
-      remove_range(gl_ranges, ptr);
 }
-
-
-
-
-
-
-/*
- *  mm_realloc - NOT implemented
- */
-void *mm_realloc(void *ptr, size_t t)
-{
-    return NULL;
-}
-
 
 
 
