@@ -19,11 +19,6 @@
 #include "mm.h"
 #include "memlib.h"
 
-team_t team = {
-    /* Your full name */
-    "Chanhee Cho",
-};
-
 
 /* single word (4) or double word (8) alignment */
 #define ALIGNMENT 8
