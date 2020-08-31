@@ -1,5 +1,5 @@
 /*
- * mm.c - Explicit free list using LIFO, first fit malloc package.
+ * malloc_package.c - Explicit free list using LIFO, first fit malloc package.
  *
  * In this approach, each block has word size footer and header.
  * To use explicit free list, every free block has word size next, prev.
@@ -16,7 +16,6 @@
 #include <unistd.h>
 #include <string.h>
 
-#include "mm.h"
 #include "memlib.h"
 
 
