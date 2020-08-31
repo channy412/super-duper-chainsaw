@@ -83,11 +83,11 @@ static void *extend_heap(size_t words);
 
 
 /*
- *  mm_init - initialize the malloc package.
+ *  my_init - initialize the malloc package.
  *  return value : 0 on success, -1 on error.
  *  prologue and epilog is used and it is useful when coalescing.
  */
-int mm_init(range_t **ranges)
+int my_init()
 {
     list_head = NULL;
     if((heap_listp = mem_sbrk(4*WSIZE)) == (void *)(- 1)) return -1;
@@ -241,12 +241,12 @@ static void* place(void *bp, size_t asize) {
 
 
 /*
- *  mm_malloc - Allocate a block by searching the free list.
+ *  my_malloc - Allocate a block by searching the free list.
  *  Find the block with first fit.
  *  If no block found, allocate heap more.
  *  Always allocate a block whose size is a multiple of the alignment.
  */
-void *mm_malloc(size_t size)
+void *my_malloc(size_t size)
 {
     size_t asize;        /* adjusted size */
     size_t extendsize;   /* Amount to extend heap if no fit */
@@ -283,11 +283,11 @@ void *mm_malloc(size_t size)
 
 
 /*
- *  mm_free - Frees a block.
+ *  my_free - Frees a block.
  *  Coalesce if there exists adjacent free block(Immediate Coalscing).
  *  Add this new free block the the head of the free list(LIFO).
  */
-void mm_free(void *ptr)
+void my_free(void *ptr)
 {
     void * ptr_save = ptr;
     size_t size = GET_SIZE(HDRP(ptr));
@@ -361,17 +361,17 @@ void mm_free(void *ptr)
 
 
 /*
- *  mm_exit - finalize the malloc package.
+ *  my_exit - finalize the malloc package.
  *  free all the unfreed blocks
  */
-void mm_exit(void)
+void my_exit(void)
 {
     void * bp = heap_listp;
 
     /* traverse the entire heap and free all unfreed block */
     for( bp = NEXT_BLKP(heap_listp) ; GET_SIZE(HDRP(bp)) > 0; bp = NEXT_BLKP(bp) ) {
         if( GET_ALLOC(HDRP(bp)) )  {
-            mm_free(bp);
+            my_free(bp);
         }
     }
 }
