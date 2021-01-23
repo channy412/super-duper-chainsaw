@@ -3,6 +3,45 @@
 
 
 
+
+## Static Analysis 
+
+Several simple static analyzers.   
+
+
+
+## Kernel Thread and Priority Donation
+
+An implmention of kernel thread, preemptive scheduler, and priority donation. This is based on XV6 and Operating System course.
+
+
+
+
+## Fast Fourier Transform
+
+An implementation of fast fourier transfrom.    
+Check interesting audio examples.   
+
+
+
+
+## Groebner Bases 
+
+An implementation of Buchberger's algorithm to calculate groebner bases.   
+
+
+
+
+
+
+## Malloc Package Lab 
+
+A malloc package implementaion from system programming course.   
+This is not a fancy one, but well-commented and easy to read.   
+
+
+
+
 ## ML based trading strategy(HKUST)    
 
 Title: T+0 stock trading strategy based on machine learning techniques    
@@ -18,44 +57,6 @@ A project to make improvements and experimenting based on the following paper.
 Efficient Subgraph Matching: Harmonizing Dynamic Programming, Adaptive Matching Order, and Failing Set Together    
 DAF [SIGMOD 2019]    
     
-
-
-
-## Static Analysis 
-
-Several simple static analyzers.   
-
-
-
-
-## Fast Fourier Transform
-
-An implementation of fast fourier transfrom.    
-Check interesting audio examples.   
-
-
-
-
-
-## Groebner Bases 
-
-An implementation of Buchberger's algorithm to calculate groebner bases.   
-
-
-
-
-## Kernel Thread and Priority Donation
-
-An implmention of kernel thread, preemptive scheduler, and priority donation. This is based on XV6 and Operating System course.
-
-
-
-
-
-## Malloc Package Lab 
-
-A malloc package implementaion from system programming course.   
-This is not a fancy one, but well-commented and easy to read.   
 
 
 
