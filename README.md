@@ -1,4 +1,4 @@
-# A list of undergraduate projects
+# A List of projects
 
 
 
@@ -6,13 +6,13 @@
 
 ## Static Analysis 
 
-Several simple static analyzers.   
+Several special purpose static analyzers.(SNU 4190.664 Static Program Analysis)
 
 
 
-## Kernel Thread and Priority Donation
+## Concurrent Kernel Thread and Priority Donation
 
-An implmention of kernel thread, preemptive scheduler, and priority donation. This is based on XV6 and Operating System course.
+An implmention of concurrent kernel thread, preemptive scheduler, and priority donation. This is based on XV6 and Operating System course.
 
 
 

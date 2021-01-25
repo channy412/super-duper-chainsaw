@@ -1,11 +1,11 @@
 (*
  * SNU 4541.664A Program Analysis 2019 Fall
  * DongKwon Lee (dklee@ropas.snu.ac.kr)
- * Chanhee Cho (cksgml@snu.ac.kr) 
  *)
 
 
 (*
+ * Chanhee Cho (cksgml@snu.ac.kr) 
  * In this approach, there are two stages.
  * At first, pre-analysis simplies definite branch and produce simplied program
  * e.g. if(1) c1 c2  to c1,   while(0) do c  to  skip
